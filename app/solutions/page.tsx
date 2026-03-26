@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import SolutionsCarousel from "@/components/SolutionsCarousel";
 import {
   Search, Wrench, LayoutGrid, PenTool, ClipboardList, HardHat,
   Zap, Settings, PackageCheck, Train, Warehouse, FileText,
@@ -245,20 +246,8 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Quick nav */}
-      <section className="bg-stotko-black border-b border-white/10 py-6 overflow-x-auto">
-        <div className="max-w-7xl mx-auto px-6 flex gap-6 min-w-max">
-          {sections.map((s) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className="text-xs font-bold uppercase tracking-widest text-stotko-gray-text hover:text-white transition-colors whitespace-nowrap"
-            >
-              {s.title}
-            </a>
-          ))}
-        </div>
-      </section>
+      {/* Carousel nav */}
+      <SolutionsCarousel />
 
       {/* Sections */}
       <div className="bg-white">
